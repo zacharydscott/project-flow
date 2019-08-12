@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { FormTestGroupService } from '../form-test-group.service';
+import { Component } from '@angular/core';
+import { FormGroupService } from '../form-group.service';
 import { SuperFormGroup } from '../../common/super-forms';
-import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-test-page',
@@ -14,12 +13,12 @@ export class TestPageComponent {
 
 
 
-  constructor(private formTestGroupService: FormTestGroupService) {
+  constructor(private formGroupService: FormGroupService) {
 
   }
 
   ngOnInit() {
-    this.form = this.formTestGroupService.getPageForm(['test-page']);
+    this.form = this.formGroupService.getPageForm(['test-page']);
     this.title = this.form.label;
   }
  
