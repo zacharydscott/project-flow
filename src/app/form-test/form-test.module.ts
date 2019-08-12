@@ -4,6 +4,7 @@ import { TestPageComponent } from './test-page/test-page.component';
 import { RoutingModule } from './routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { controlsPipe } from '../common/controls-pipe';
+import { CommonComponentsModule } from '../common/components/common-components.module';
 
 @NgModule({
   declarations: [TestPageComponent,controlsPipe],
@@ -11,7 +12,8 @@ import { controlsPipe } from '../common/controls-pipe';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    RoutingModule
+    RoutingModule,
+    CommonComponentsModule
   ]
 })
 export class FormTestModule { }

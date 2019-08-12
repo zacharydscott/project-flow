@@ -1,10 +1,12 @@
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { SuperFormGroup } from './super-forms';
 
 export class FormGroupService {
-    public formGroup: FormGroup;
+    public formGroup: SuperFormGroup;
     public depth: number = 2;
 
-    constructor(protected fb: FormBuilder) {}
+    constructor(protected fb: FormBuilder) {
+    }
 
     public getPageForm(pageName: string | Array<string>) {
         if (typeof pageName === 'string') {

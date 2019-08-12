@@ -1,0 +1,57 @@
+{
+  "label": "Test Module Form",
+  "level": "module",
+  "pages": {
+    "test-page": {
+      "label": "Page Title automatically inserted from json",
+      "level": "page",
+      "sections": {
+        "basic-information": {
+            "label": "Basic Information",
+          "controls": {
+            "subject": {
+              "label": "subject",
+              "type": "text",
+              "editable": false,
+              "visible": true,
+              "required": false
+            },
+            "dateOpened": {
+              "label": "Date Opened",
+              "type": "date",
+              "editable": true,
+              "visible": true,
+              "required": true
+            },
+            "leadInvestigator": {
+              "label": "Investigator",
+              "type": "text",
+              "editable": true,
+              "visible": true,
+              "required": false
+            }
+          }
+        },
+        "additional-information": {
+            "label": "Additional Information",
+          "controls": {
+            "closedDate": {
+              "label": "Closure Date",
+              "type": "date",
+              "editable": false,
+              "visible": true,
+              "required": false
+            },
+            "country": {
+              "label": "Country",
+              "type": "text",
+              "editable": true,
+              "visible": true,
+              "required": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

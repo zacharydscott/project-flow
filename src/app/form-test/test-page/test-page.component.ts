@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FormTestGroupService } from '../form-test-group.service';
-import { FormGroup } from '@angular/forms';
+import { SuperFormGroup } from '../../common/super-forms';
+import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-test-page',
@@ -8,14 +9,18 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./test-page.component.scss']
 })
 export class TestPageComponent {
-  form: FormGroup;
+  form: SuperFormGroup;
   title: string = 'Test-Page'
-  constructor(private formTestGroupService: FormTestGroupService) { 
+
+
+
+  constructor(private formTestGroupService: FormTestGroupService) {
 
   }
 
   ngOnInit() {
-    this.form = this.formTestGroupService.getPageForm(['test-page'])
+    this.form = this.formTestGroupService.getPageForm(['test-page']);
+    this.title = this.form.label;
   }
-
+ 
 }

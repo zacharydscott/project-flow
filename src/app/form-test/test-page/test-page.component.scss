@@ -1,5 +1,16 @@
-
-.section{
-    border: 1px solid grey;
-    margin-bottom: 15px;
+.wrapper {
+  background-color: #e9faff;
+  h2 {
+      margin: 15px auto 15px 25px;
+  }
+  .section-header{
+      margin: 10px;
+  }
+  .section {
+    background-color: white;
+    margin: 15px 25px 15px 25px;
+  }
+  .section-body {
+      margin: 10px;
+  }
 }
