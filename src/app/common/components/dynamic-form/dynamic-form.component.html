@@ -1,0 +1,9 @@
+<div class="wrapper">
+        <h4>{{form.label}}</h4>
+        <div *ngFor="let section of form.controls | controls" class="section">
+                <app-dynamic-form-section [section]="section"></app-dynamic-form-section>
+            <div style="color: white; line-height: 0">_</div>
+        </div>
+        <div style="color:#e9faff; line-height: 0;">_</div>
+    </div>
+     

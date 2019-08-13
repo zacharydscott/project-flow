@@ -1,0 +1,6 @@
+<span class="section-header">{{section.label}}</span>
+<div *ngFor="let control of section.controls | controls" class="section-body">
+    <div>{{control.label}}<span *ngIf="control.required" style="color: red"> *</span></div>
+    <app-dynamic-form-element-component *ngIf="control.editable" [control]="control"></app-dynamic-form-element-component>
+    <span *ngIf="!control.editable" class="non-editable">{{control.value || '-'}}</span>
+</div>

@@ -1,26 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TextInputComponent } from './text-input/text-input.component';
-import { DateComponent } from './date/date.component';
+import { TextInputComponent } from './dynamic-form-components/text-input/text-input.component';
+import { DateComponent } from './dynamic-form-components/date/date.component';
 import { DynamicFormElementComponent } from './dynamic-component/dynamic-component.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { controlsPipe } from '../controls-pipe';
+import { CommonModule } from '@angular/common';
+import { DynamicFormSectionComponent } from './dynamic-form-section/dynamic-form-section.component';
 
 @NgModule({
   declarations: [
-    DynamicFormElementComponent, TextInputComponent, DateComponent
+    controlsPipe, DynamicFormElementComponent, TextInputComponent, DateComponent, DynamicFormComponent, DynamicFormSectionComponent
   ],
   imports: [
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
   ],
   providers: [],
-  exports: [DynamicFormElementComponent],
+  exports: [DynamicFormElementComponent, DynamicFormComponent],
   entryComponents: [DynamicFormElementComponent,TextInputComponent,DateComponent]
 })
 export class CommonComponentsModule { }

@@ -1,7 +1,7 @@
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { SuperFormGroup } from './super-forms';
 
-export class FormGroupService {
+export class FormGroupServiceBase {
     public formGroup: SuperFormGroup;
     public depth: number = 2;
 

@@ -9,6 +9,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonComponentsModule } from './common/components/common-components.module';
 
+
 @NgModule({
   declarations: [
     AppComponent

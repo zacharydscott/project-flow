@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SuperFormControl } from '../../super-forms';
+import { SuperFormControl } from '../../../super-forms';
 
 @Component({
   selector: 'app-date',
